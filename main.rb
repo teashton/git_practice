@@ -1,8 +1,12 @@
+require 'colorize'
+require 'pry'
+
 def puts_git(cmd)
   puts `git #{cmd} -h`
 end
 
 def menu
+  puts 'MAIN MENU'.colorize(blue.on_red.blink)
   puts '1: Enter Git Command'
   puts '2: Exit'
   choice = gets.to_i
